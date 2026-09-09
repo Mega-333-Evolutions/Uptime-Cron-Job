@@ -1,0 +1,16 @@
+name: Keep Space Awake
+on:
+  schedule:
+    - cron: "0 */12 * * *" # Runs every 12 hours
+  workflow_dispatch: # Allows you to run it manually
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping HF Spaces
+        run: |
+          curl -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" -sL https://mega345evolutions-ultroid.hf.space > /dev/null
+          curl -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" -sL https://zmoves-anime-sharing.hf.space > /dev/null
+          curl -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" -sL https://mega-evolutions-one-piece-bounty-bot.hf.space > /dev/null
+          curl -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" -sL https://megaevolutions-one-piece-dashboard.hf.space > /dev/null
